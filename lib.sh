@@ -1,3 +1,12 @@
+function is_macos() {
+  if [[ "$( uname )" == "Darwin" ]]; then
+    return 0
+  fi
+
+  return 1
+}
+
+
 function datetime_now() {
     date +"%Y-%m-%d %H:%M:%S"
 }
@@ -39,3 +48,6 @@ function ip() {
 
   log_info "$privateIp"
 }
+
+
+alias aptupgrade="apt update -y && apt upgrade -y && apt autoremove -y"
