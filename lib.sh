@@ -50,4 +50,4 @@ function ip() {
 }
 
 
-alias aptupgrade="apt update -y && apt upgrade -y && apt autoremove -y"
+alias aptupgrade="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
