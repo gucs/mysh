@@ -50,4 +50,10 @@ function ip() {
 }
 
 
+function docker_rmi_none() {
+  # https://projectatomic.io/blog/2015/07/what-are-docker-none-none-images/
+  docker rmi $( docker images -f "dangling=true" -q )
+}
+
+
 alias aptupgrade="sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove -y"
