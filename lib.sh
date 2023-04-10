@@ -28,9 +28,9 @@ function myip() {
 }
 
 
-# ip     返回本机第一个 IP 地址
-# ip all 返回本机全部 IP 地址
-function ip() {
+# gip     返回本机第一个 IP 地址
+# gip all 返回本机全部 IP 地址
+function gip() {
   if is_macos; then
     # https://apple.stackexchange.com/a/147777
     privateIp=$( ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' )
